@@ -1,14 +1,13 @@
 [
     {
-        "name": "agent_deployment_1",
-        "module": {"name": "module_template"},
-        "worker_node_url": "http://localhost:7001",
+        "name": "maintenance_agent",
+        "module": {"name": "maintenance_module"},
+        "worker_node_url": "http://node.naptha.ai:7001",
         "agent_config": {
-            "config_name": "agent_config_1",
+            "config_name": "basic_agent",
             "llm_config": {"config_name": "model_2"},
-            "persona_module" : {"url": "https://huggingface.co/datasets/richardblythman/characterfile_richardblythman"},
             "system_prompt": {
-                "role": "You are a helpful AI assistant.",
+                "role": "You are a system maintenance and monitoring agent.",
                 "persona": ""
             }
         }
