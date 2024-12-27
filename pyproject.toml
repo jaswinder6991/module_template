@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "module-template"
-version = "0.1.0"
-description = ""
-authors = ["Richard Blythman <richardblythman@gmail.com>"]
+name = "maintain-agent"
+version = "0.1"
+description = "System maintenance and monitoring agent"
+authors = ["Jaswinder"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
