@@ -49,7 +49,7 @@ class BasicModule:
         }
 
 # Default entrypoint when the module is executed
-def run(module_run: Union[AgentRunInput, OrchestratorRunInput, EnvironmentRunInput]):
+def run(module_run: Union[AgentRunInput, OrchestratorRunInput, EnvironmentRunInput]=None, *args, **kwargs):
     basic_module = BasicModule(module_run)
     method = getattr(basic_module, module_run.inputs.func_name, None)
     return method(module_run.inputs.func_input_data)
