@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from naptha_sdk.schemas import AgentRunInput, OrchestratorRunInput, EnvironmentRunInput
 from naptha_sdk.utils import get_logger
-from module_template.schemas import InputSchema
+from maintain_agent.schemas import InputSchema
 from typing import Union
 
 load_dotenv()
@@ -64,9 +64,9 @@ if __name__ == "__main__":
     input_params = InputSchema(func_name="func", func_input_data="gm...")
 
     # Load Configs
-    agent_deployments = load_agent_deployments("module_template/configs/agent_deployments.json", load_persona_data=False, load_persona_schema=False)
-    # orchestrator_deployments = load_orchestrator_deployments("module_template/configs/orchestrator_deployments.json")
-    # environment_deployments = load_environment_deployments("module_template/configs/environment_deployments.json")
+    agent_deployments = load_agent_deployments("maintain_agent/configs/agent_deployments.json", load_persona_data=False, load_persona_schema=False)
+    # orchestrator_deployments = load_orchestrator_deployments("maintain_agent/configs/orchestrator_deployments.json")
+    # environment_deployments = load_environment_deployments("maintain_agent/configs/environment_deployments.json")
 
     agent_run = AgentRunInput(
         inputs=input_params,
